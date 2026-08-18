@@ -1,0 +1,36 @@
+.github__panel {
+  background: var(--ink);
+  border-radius: var(--radius-l);
+  padding: clamp(36px, 5vw, 60px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.github__panel .eyebrow {
+  color: var(--cyan);
+}
+
+.github__title {
+  color: #fff;
+  font-size: clamp(1.4rem, 2.6vw, 1.9rem);
+  max-width: 26ch;
+  margin-top: 14px;
+}
+
+.github__text {
+  color: #A9B4C9;
+  margin-top: 14px;
+  max-width: 52ch;
+  font-size: 0.98rem;
+}
+
+.github__panel .btn--primary {
+  background: var(--accent);
+  flex-shrink: 0;
+}
+.github__panel .btn--primary:hover {
+  background: var(--cyan);
+}

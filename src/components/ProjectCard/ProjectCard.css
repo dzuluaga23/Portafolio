@@ -1,0 +1,134 @@
+.project-card {
+  height: 100%;
+  background: var(--bg-raised);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-l);
+  padding: clamp(24px, 3vw, 40px);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: border-color var(--dur-s) var(--ease), transform var(--dur-s) var(--ease);
+}
+
+.project-card:hover {
+  border-color: var(--line-strong);
+  transform: translateY(-3px);
+}
+
+.project-card__head {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.project-card__index {
+  color: var(--ink-faint);
+  font-size: 0.85rem;
+  padding-top: 4px;
+}
+
+.project-card__name {
+  font-size: clamp(1.3rem, 2vw, 1.7rem);
+  color: var(--ink);
+}
+
+.project-card__tagline {
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  margin-top: 4px;
+}
+
+.project-card__status {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.72rem;
+  color: var(--ink-soft);
+  white-space: nowrap;
+  padding-top: 6px;
+}
+
+.project-card__status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--ink-faint);
+}
+
+.status--live .project-card__status-dot {
+  background: var(--cyan);
+  box-shadow: 0 0 0 3px rgba(18, 181, 201, 0.15);
+}
+
+.project-card__description {
+  color: var(--ink-soft);
+  font-size: 0.98rem;
+  max-width: 62ch;
+}
+
+.project-card__architecture {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.76rem;
+  color: var(--ink-soft);
+  background: var(--bg-inset);
+  border-radius: var(--radius-s);
+  padding: 12px 14px;
+}
+
+.project-card__arch-step {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--ink);
+}
+
+.project-card__arch-arrow {
+  color: var(--accent);
+  margin-left: 4px;
+}
+
+.project-card__stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.project-card__chip {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  color: var(--ink-soft);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 5px 12px;
+}
+
+.project-card__demo {
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  background: var(--accent-soft);
+  border: 1px dashed var(--accent);
+  border-radius: var(--radius-s);
+  padding: 10px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.project-card__demo-label {
+  color: var(--accent);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.project-card__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 4px;
+}

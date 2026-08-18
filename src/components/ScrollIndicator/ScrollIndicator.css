@@ -1,0 +1,86 @@
+.scroll-indicator {
+  position: fixed;
+  right: 28px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 50;
+}
+
+.scroll-indicator__track {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  padding-left: 14px;
+}
+
+.scroll-indicator__track::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 4px;
+  bottom: 4px;
+  width: 1px;
+  background: var(--line-strong);
+}
+
+.scroll-indicator__line {
+  position: absolute;
+  left: 0;
+  top: 4px;
+  bottom: 4px;
+  width: 1px;
+  background: var(--accent);
+  transform-origin: top;
+  transform: scaleY(0);
+  transition: transform var(--dur-m) var(--ease);
+}
+
+.scroll-indicator__item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  pointer-events: auto;
+}
+
+.scroll-indicator__index {
+  font-size: 0.7rem;
+  color: var(--ink-faint);
+  transition: color var(--dur-s) var(--ease);
+}
+
+.scroll-indicator__label {
+  font-size: 0.72rem;
+  color: var(--ink-faint);
+  max-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  opacity: 0;
+  transition: max-width var(--dur-s) var(--ease), opacity var(--dur-s) var(--ease);
+}
+
+.scroll-indicator__item:hover .scroll-indicator__label {
+  max-width: 100px;
+  opacity: 1;
+}
+
+.scroll-indicator__dot {
+  display: none;
+}
+
+.scroll-indicator__item.is-active .scroll-indicator__index {
+  color: var(--accent);
+}
+
+.scroll-indicator__item.is-active .scroll-indicator__label {
+  max-width: 100px;
+  opacity: 1;
+  color: var(--ink);
+}
+
+@media (max-width: 1024px) {
+  .scroll-indicator {
+    display: none;
+  }
+}

@@ -1,0 +1,145 @@
+/* ============================================================
+   DESIGN TOKENS
+   Concepto: "editor / panel de sistema" — fondo claro, tipografía
+   técnica, acento eléctrico usado con moderación.
+   ============================================================ */
+:root {
+  /* color */
+  --bg: #F6F7F9;
+  --bg-raised: #FFFFFF;
+  --bg-inset: #EDEFF3;
+  --ink: #0B1220;
+  --ink-soft: #4B5768;
+  --ink-faint: #8892A0;
+  --line: #E1E5EB;
+  --line-strong: #CDD3DC;
+  --accent: #2F6FED;
+  --accent-ink: #FFFFFF;
+  --accent-soft: #EAF0FE;
+  --cyan: #12B5C9;
+  --code-bg: #0B1220;
+  --code-ink: #D6E4FF;
+
+  /* type */
+  --font-display: 'Space Grotesk', 'Arial Narrow', sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', 'SFMono-Regular', Menlo, monospace;
+
+  /* layout */
+  --max-width: 1180px;
+  --gutter: clamp(20px, 6vw, 64px);
+  --section-pad: clamp(72px, 12vw, 140px);
+  --radius-s: 6px;
+  --radius-m: 12px;
+  --radius-l: 20px;
+
+  /* motion */
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-s: 0.2s;
+  --dur-m: 0.5s;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+p { margin: 0; }
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+img { max-width: 100%; display: block; }
+
+::selection {
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding-inline: var(--gutter);
+}
+
+.section {
+  padding-block: var(--section-pad);
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.mono {
+  font-family: var(--font-mono);
+}
+
+/* reveal-on-scroll base state, toggled via IntersectionObserver in Reveal.jsx */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity var(--dur-m) var(--ease), transform var(--dur-m) var(--ease);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  * {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --section-pad: clamp(56px, 14vw, 88px);
+  }
+}
