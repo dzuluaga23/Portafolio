@@ -1,5 +1,6 @@
 .github__panel {
-  background: var(--ink);
+  background: var(--bg-raised);
+  border: 1px solid var(--line);
   border-radius: var(--radius-l);
   padding: clamp(36px, 5vw, 60px);
   display: flex;
@@ -14,14 +15,14 @@
 }
 
 .github__title {
-  color: #fff;
+  color: var(--ink);
   font-size: clamp(1.4rem, 2.6vw, 1.9rem);
   max-width: 26ch;
   margin-top: 14px;
 }
 
 .github__text {
-  color: #A9B4C9;
+  color: var(--ink-soft);
   margin-top: 14px;
   max-width: 52ch;
   font-size: 0.98rem;
@@ -31,6 +32,7 @@
   background: var(--accent);
   flex-shrink: 0;
 }
+
 .github__panel .btn--primary:hover {
   background: var(--cyan);
 }

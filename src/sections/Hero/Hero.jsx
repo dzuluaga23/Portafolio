@@ -1,8 +1,7 @@
 import Button from '../../components/Button/Button'
 import { profile } from '../../data/profile'
+import profilePhoto from '../../assets/images/profile.jpg'
 import './Hero.css'
-
-const STACK_LINE = ['React', 'ASP.NET Core', 'SQL Server'].join(' · ')
 
 export default function Hero() {
   return (
@@ -71,7 +70,7 @@ export default function Hero() {
         </div>
 
         <div className="hero__panel" aria-hidden="true">
-          <div className="hero__panel-window">
+          <div className="hero__panel-window hero__panel-window--photo">
             <div className="hero__panel-bar">
               <span />
               <span />
@@ -79,32 +78,11 @@ export default function Hero() {
               <span className="hero__panel-title mono"></span>
             </div>
 
-            <div className="hero__panel-body mono">
-              <p>
-                <span className="hero__prompt">$</span> whoami
-              </p>
-
-              <p className="hero__panel-output">
-                david-zuluaga · full-stack developer
-              </p>
-
-              <p>
-                <span className="hero__prompt">$</span> stack --active
-              </p>
-
-              <p className="hero__panel-output">
-                {STACK_LINE}
-              </p>
-
-              <p>
-                <span className="hero__prompt">$</span> status
-              </p>
-
-              <p className="hero__panel-output hero__panel-output--accent">
-                construyendo proyectos reales
-                <span className="hero__cursor" />
-              </p>
-            </div>
+            <img
+              src={profilePhoto}
+              alt=""
+              className="hero__photo"
+            />
           </div>
 
           <div className="hero__panel-glow" />

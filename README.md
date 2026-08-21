@@ -29,18 +29,6 @@ Todo el contenido real vive en `src/data/`, no en los componentes:
 | `src/data/evolution.js` | Tu camino: educación y experiencia real |
 | `src/data/navigation.js` | Secciones del navbar y del indicador de scroll |
 
-## Agregar tu CV
-
-1. Coloca el PDF en `public/cv/David-Zuluaga-CV.pdf` (el nombre debe coincidir
-   con `profile.cv.path` en `src/data/profile.js`).
-2. Los botones "Descargar CV" y "Ver CV" del Hero detectan automáticamente si
-   el archivo existe: si no está, aparecen deshabilitados sin romper la página.
-
-## Agregar tu correo
-
-Edita `profile.contact.email` en `src/data/profile.js`. Mientras esté vacío,
-la sección de Contacto usa LinkedIn como canal principal.
-
 ## Agregar una foto (opcional)
 
 El Hero usa un panel visual tipo terminal en vez de una foto. Si prefieres

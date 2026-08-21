@@ -1,15 +1,46 @@
 .about__grid {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
-  gap: clamp(40px, 6vw, 90px);
+  gap: clamp(40px, 6vw, 80px);
   align-items: start;
 }
 
+.about__main {
+  min-width: 0;
+}
+
 .about__text {
-  font-size: 1.2rem;
-  line-height: 1.75;
+  font-size: clamp(1.05rem, 1.4vw, 1.2rem);
+  line-height: 1.8;
   color: var(--ink);
-  max-width: 56ch;
+  max-width: 62ch;
+}
+
+.about__tech-panel {
+  margin-top: 30px;
+  padding: 20px;
+  background: var(--bg-raised);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-m);
+}
+
+.about__tech-heading {
+  display: block;
+  color: var(--accent);
+  font-size: 0.76rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.about__tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.about__tech-list .tech-badge {
+  min-width: auto;
 }
 
 .about__focus {
@@ -24,24 +55,34 @@
 
 .about__focus-item {
   background: var(--bg-raised);
-  padding: 22px;
+  padding: 20px;
+  min-height: 105px;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 7px;
 }
 
 .about__focus-label {
   color: var(--accent);
-  font-size: 0.8rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
 .about__focus-detail {
   color: var(--ink-soft);
-  font-size: 0.9rem;
+  font-size: 0.88rem;
+  line-height: 1.55;
 }
 
 @media (max-width: 860px) {
   .about__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .about__focus {
     grid-template-columns: 1fr;
   }
 }

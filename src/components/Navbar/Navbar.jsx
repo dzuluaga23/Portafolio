@@ -1,11 +1,13 @@
 import { useEffect, useState } from 'react'
 import { navigation } from '../../data/navigation'
 import { profile } from '../../data/profile'
+import { useTheme } from '../../hooks/useTheme'
 import './Navbar.css'
 
 export default function Navbar({ activeId }) {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const { theme, toggleTheme } = useTheme()
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24)
@@ -37,6 +39,16 @@ export default function Navbar({ activeId }) {
             </a>
           ))}
         </nav>
+
+        <button
+          type="button"
+          className="navbar__theme-toggle"
+          onClick={toggleTheme}
+          aria-label={theme === 'dark' ? 'Activar modo claro' : 'Activar modo oscuro'}
+          title={theme === 'dark' ? 'Modo claro' : 'Modo oscuro'}
+        >
+          {theme === 'dark' ? '☀︎' : '☾'}
+        </button>
 
         <button
           className={`navbar__toggle ${menuOpen ? 'is-open' : ''}`}

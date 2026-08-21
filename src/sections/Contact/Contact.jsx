@@ -7,7 +7,7 @@ export default function Contact() {
   const hasEmail = Boolean(profile.contact.email)
 
   return (
-    <section id="contacto" className="section contact">
+    <section id="contacto" className="section section--alt contact">
       <div className="container">
         <span className="eyebrow">05 — Contacto</span>
         <Reveal as="h2" className="contact__heading">
@@ -30,7 +30,7 @@ export default function Contact() {
           <Button as="a" href={profile.social.github} target="_blank" rel="noopener noreferrer" variant="secondary">
             GitHub
           </Button>
-          <Button as="a" href={profile.cv.path} download variant="ghost">
+          <Button as="a" href={profile.cv.path} download={profile.cv.fileName} variant="ghost">
             Descargar CV
           </Button>
         </Reveal>

@@ -1,37 +1,51 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>David Zuluaga | Software Developer</title>
-    <meta
-      name="description"
-      content="David Zuluaga, desarrollador de software full stack en Medellín. Construyo aplicaciones web completas con React, .NET y SQL Server, desde la base de datos hasta la interfaz."
-    />
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Open Graph -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="David Zuluaga | Software Developer" />
-    <meta
-      property="og:description"
-      content="Desarrollador full stack en Medellín. Aplicaciones web completas con React, .NET y SQL Server."
-    />
-    <meta property="og:url" content="https://davidzuluaga.dev" />
+  <title>David Zuluaga | Software Developer</title>
+  <meta name="description"
+    content="David Zuluaga, desarrollador de software full stack en Medellín. Construyo aplicaciones web completas con React, .NET y SQL Server, desde la base de datos hasta la interfaz." />
 
-    <meta name="theme-color" content="#F6F7F9" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="David Zuluaga | Software Developer" />
+  <meta property="og:description"
+    content="Desarrollador full stack en Medellín. Aplicaciones web completas con React, .NET y SQL Server." />
+  <meta property="og:url" content="https://davidzuluaga.dev" />
 
-    <!-- Fonts: Space Grotesk (display) · Inter (body) · JetBrains Mono (utility/code) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+  <meta name="theme-color" content="#EEF1F6" />
+
+  <!-- Evita el "flash" del tema equivocado al cargar: aplica data-theme antes de pintar -->
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('portfolio-theme')
+        var theme =
+          saved === 'light' || saved === 'dark'
+            ? saved
+            : window.matchMedia('(prefers-color-scheme: dark)').matches
+              ? 'dark'
+              : 'light'
+        document.documentElement.setAttribute('data-theme', theme)
+      } catch (e) { }
+    })()
+  </script>
+
+  <!-- Fonts: Space Grotesk (display) · Inter (body) · JetBrains Mono (utility/code) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
 </html>

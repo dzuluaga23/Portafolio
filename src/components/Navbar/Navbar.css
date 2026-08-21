@@ -4,7 +4,7 @@
   left: 0;
   right: 0;
   z-index: 100;
-  background: rgba(246, 247, 249, 0.7);
+  background: var(--navbar-bg);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid transparent;
@@ -13,7 +13,7 @@
 
 .navbar--scrolled {
   border-bottom-color: var(--line);
-  background: rgba(246, 247, 249, 0.92);
+  background: var(--navbar-bg-scrolled);
 }
 
 .navbar__inner {
@@ -40,8 +40,8 @@
   width: 32px;
   height: 32px;
   border-radius: 8px;
-  background: var(--ink);
-  color: #fff;
+  background: var(--panel-invert-bg);
+  color: var(--panel-invert-ink);
   font-family: var(--font-mono);
   font-size: 0.78rem;
   letter-spacing: 0.02em;
@@ -83,6 +83,27 @@
   transform: scaleX(1);
 }
 
+.navbar__theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: var(--bg-raised);
+  color: var(--ink);
+  font-size: 1rem;
+  line-height: 1;
+  margin-left: 8px;
+  transition: border-color var(--dur-s) var(--ease), transform var(--dur-s) var(--ease), background var(--dur-s) var(--ease);
+}
+
+.navbar__theme-toggle:hover {
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+
 .navbar__toggle {
   display: none;
   flex-direction: column;
@@ -105,6 +126,7 @@
 .navbar__toggle.is-open span:first-child {
   transform: translateY(3.25px) rotate(45deg);
 }
+
 .navbar__toggle.is-open span:last-child {
   transform: translateY(-3.25px) rotate(-45deg);
 }
@@ -117,9 +139,11 @@
   .navbar__links {
     display: none;
   }
+
   .navbar__toggle {
     display: flex;
   }
+
   .navbar__mobile {
     display: flex;
     flex-direction: column;
@@ -129,9 +153,11 @@
     border-bottom: 1px solid var(--line);
     transition: max-height var(--dur-m) var(--ease);
   }
+
   .navbar__mobile.is-open {
     max-height: 400px;
   }
+
   .navbar__mobile-link {
     padding: 16px var(--gutter);
     border-top: 1px solid var(--line);
@@ -140,6 +166,7 @@
     display: flex;
     gap: 10px;
   }
+
   .navbar__mobile-link.is-active {
     color: var(--accent);
   }

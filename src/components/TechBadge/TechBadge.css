@@ -31,12 +31,14 @@
   align-items: center;
   justify-content: center;
 
-  width: 22px;
-  height: 22px;
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
 
   flex-shrink: 0;
 
   color: var(--accent);
+  background: color-mix(in srgb, currentColor 14%, transparent);
 
   font-size: 20px;
 
@@ -75,8 +77,8 @@
   width: max-content;
   max-width: 220px;
 
-  background: var(--ink);
-  color: #fff;
+  background: var(--panel-invert-bg);
+  color: var(--panel-invert-ink);
 
   font-family: var(--font-body);
   font-size: 0.78rem;

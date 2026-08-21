@@ -2,119 +2,44 @@ export const technologies = [
   {
     category: 'Backend',
     items: [
-      {
-        name: 'C#',
-        icon: 'csharp',
-        description: 'Lenguaje principal para lógica de negocio y APIs.',
-      },
-      {
-        name: '.NET',
-        icon: 'dotnet',
-        description: 'Plataforma base de mis servicios backend.',
-      },
-      {
-        name: 'ASP.NET Core',
-        icon: 'dotnet',
-        description: 'Framework para construir APIs REST.',
-      },
-      {
-        name: 'Entity Framework Core',
-        icon: 'entityframework',
-        description: 'ORM para acceso y migraciones de datos.',
-      },
+      { name: 'C#', icon: 'csharp', description: 'Lenguaje principal para desarrollo backend.' },
+      { name: 'ASP.NET Core / .NET 8', icon: 'dotnet', description: 'Framework y plataforma para construir APIs y servicios robustos.' },
+      { name: 'Node.js', icon: 'nodejs', description: 'Entorno de ejecución para aplicaciones y APIs con JavaScript.' },
+      { name: 'Ruby on Rails', icon: 'rails', description: 'Framework para desarrollo de aplicaciones web Full Stack.' },
+      { name: 'REST API', icon: 'restapi', description: 'Diseño, integración y consumo de APIs RESTful.' },
+      { name: 'JWT', icon: 'jwt', description: 'Autenticación basada en tokens para aplicaciones web y APIs.' },
+      { name: 'Clean Architecture', icon: 'architecture', description: 'Diseño orientado a separación de responsabilidades y mantenibilidad.' },
     ],
   },
-
   {
     category: 'Frontend',
     items: [
-      {
-        name: 'React',
-        icon: 'react',
-        description: 'Construcción de interfaces basadas en componentes.',
-      },
-      {
-        name: 'JavaScript',
-        icon: 'javascript',
-        description: 'Lógica de cliente y consumo de APIs.',
-      },
-      {
-        name: 'HTML',
-        icon: 'html',
-        description: 'Estructura semántica de las interfaces.',
-      },
-      {
-        name: 'CSS',
-        icon: 'css',
-        description: 'Estilos, layout y responsive design.',
-      },
-      {
-        name: 'Vite',
-        icon: 'vite',
-        description: 'Entorno de desarrollo y build para React.',
-      },
-      {
-        name: 'Bootstrap',
-        icon: 'bootstrap',
-        description: 'Framework de estilos y componentes predefinidos.',
-      },
+      { name: 'React', icon: 'react', description: 'Interfaces modernas basadas en componentes reutilizables.' },
+      { name: 'JavaScript', icon: 'javascript', description: 'Desarrollo de lógica e interacción en aplicaciones web.' },
+      { name: 'TanStack Query', icon: 'tanstack', description: 'Gestión de estado servidor, caché y sincronización de datos.' },
+      { name: 'Vite', icon: 'vite', description: 'Herramienta de desarrollo y build para aplicaciones frontend.' },
+      { name: 'HTML', icon: 'html', description: 'Estructura semántica de interfaces web.' },
+      { name: 'CSS', icon: 'css', description: 'Diseño visual, layouts y responsive design.' },
     ],
   },
-
   {
-    category: 'Database',
+    category: 'Datos',
     items: [
-      {
-        name: 'SQL Server',
-        icon: 'sqlserver',
-        description: 'Modelado y persistencia de datos relacionales.',
-      },
-      {
-        name: 'PostgreSQL',
-        icon: 'postgresql',
-        description: 'Base de datos relacional avanzada y open source.',
-      },
-      {
-        name: 'MongoDB',
-        icon: 'mongodb',
-        description: 'Base de datos no relacional para almacenamiento de datos estructurados.',
-      },
-      {
-        name: 'MySQL',
-        icon: 'mysql',
-        description: 'Base de datos relacional ampliamente utilizada.',
-      },
+      { name: 'SQL Server', icon: 'sqlserver', description: 'Modelado y persistencia de datos relacionales.' },
+      { name: 'PostgreSQL', icon: 'postgresql', description: 'Base de datos relacional para aplicaciones escalables.' },
+      { name: 'MongoDB', icon: 'mongodb', description: 'Base de datos NoSQL para escenarios orientados a documentos.' },
     ],
   },
-
   {
-    category: 'Tools',
+    category: 'Cloud & DevOps',
     items: [
-      {
-        name: 'Git',
-        icon: 'git',
-        description: 'Control de versiones en flujos colaborativos.',
-      },
-      {
-        name: 'GitHub',
-        icon: 'github',
-        description: 'Hospedaje de repositorios y trabajo en equipo.',
-      },
-      {
-        name: 'Visual Studio Code',
-        icon: 'vscode',
-        description: 'Editor ligero para desarrollo.',
-      },
-      {
-        name: 'Postman',
-        icon: 'postman',
-        description: 'Pruebas y documentación de APIs REST.',
-      },
-      {
-        name: 'Linux',
-        icon: 'linux',
-        description: 'Sistema operativo para servidores y desarrollo.',
-      },
+      { name: 'Git', icon: 'git', description: 'Control de versiones y colaboración en desarrollo.' },
+      { name: 'GitHub', icon: 'github', description: 'Repositorios, colaboración y automatización del ciclo de desarrollo.' },
+      { name: 'Docker', icon: 'docker', description: 'Contenerización y entornos reproducibles para aplicaciones.' },
+      { name: 'AWS', icon: 'aws', description: 'Servicios cloud para despliegue, infraestructura y escalabilidad.' },
+      { name: 'GitHub Actions', icon: 'githubactions', description: 'Automatización de pipelines CI/CD.' },
+      { name: 'Swagger / OpenAPI', icon: 'swagger', description: 'Documentación e interacción con APIs.' },
+      { name: 'Postman', icon: 'postman', description: 'Pruebas e integración de APIs.' },
     ],
   },
 ]

@@ -5,7 +5,7 @@ import './Evolution.css'
 
 export default function Evolution() {
   return (
-    <section id="evolucion" className="section evolution">
+    <section id="evolucion" className="section section--alt evolution">
       <div className="container">
         <SectionTitle
           index="04"

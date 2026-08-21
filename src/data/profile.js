@@ -8,23 +8,19 @@ export const profile = {
   heroText:
     'Construyo aplicaciones web completas, desde la base de datos hasta la interfaz.',
   about:
-    'Soy desarrollador de software enfocado en construir aplicaciones web completas: desde el modelo de datos hasta la interfaz que usa la persona final. Me interesa el desarrollo Full Stack, las APIs REST, la arquitectura de software y seguir aprendiendo con cada proyecto que construyo.',
+    'Soy desarrollador de software enfocado en construir aplicaciones web completas, con especial interés en el desarrollo Full Stack, el diseño de APIs y la arquitectura de software. Trabajo con React en frontend y tecnologías como .NET, Node.js y Ruby on Rails en backend, conectando aplicaciones con bases de datos relacionales y servicios cloud. Me gusta escribir código mantenible, entender el problema antes de construir la solución y seguir aprendiendo nuevas herramientas que aporten valor real a cada proyecto.',
   social: {
     github: 'https://github.com/dzuluaga23',
     linkedin: 'https://www.linkedin.com/in/davidzdev/',
   },
-  // Coloca tu CV real en esta ruta. Si el archivo no existe, los botones
-  // de "Descargar CV" / "Ver CV" quedan deshabilitados sin romper la página.
   cv: {
-    path: '/cv/CV.pdf',
+    path: '/cv/David-Zuluaga-CV.pdf',
     fileName: 'David-Zuluaga-CV.pdf',
   },
-  // Coloca tu foto real en esta ruta para reemplazar el panel visual del Hero.
   photo: {
     path: 'src/assets/images/profile.png',
   },
   contact: {
-    // Email intencionalmente vacío: agrégalo aquí cuando quieras publicarlo.
     email: '',
     heading: '¿Construimos algo?',
     text:

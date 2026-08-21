@@ -8,6 +8,10 @@
   min-width: 0;
 }
 
+.projects__grid {
+  align-items: stretch;
+}
+
 @media (max-width: 900px) {
   .projects__reveal-wrap {
     grid-column: span 12 !important;

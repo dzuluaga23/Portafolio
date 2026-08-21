@@ -4,7 +4,7 @@ import ProjectCard from '../../components/ProjectCard/ProjectCard'
 import { projects } from '../../data/projects'
 import './Projects.css'
 
-const SPAN = { feature: 'span 12', standard: 'span 7', split: 'span 5' }
+const SPAN = { feature: 'span 12', standard: 'span 6', split: 'span 6' }
 
 export default function Projects() {
   return (

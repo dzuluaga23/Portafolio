@@ -1,4 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="14" fill="#0B1220"/>
-  <text x="32" y="41" font-family="'Space Grotesk', monospace" font-size="26" font-weight="700" fill="#3D7BFF" text-anchor="middle">DZ</text>
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#080808" />
+            <!-- <stop offset="100%" stop-color="#61DAFB" /> -->
+        </linearGradient>
+    </defs>
+    <rect width="32" height="32" rx="8" fill="url(#grad)" />
+    <text x="16" y="19" font-family="'Courier New', monospace" font-weight="bold" font-size="14" fill="white"
+        text-anchor="middle">&lt;/&gt;</text>
 </svg>

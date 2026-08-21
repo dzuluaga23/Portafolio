@@ -15,7 +15,7 @@ export default function Footer() {
         <nav className="footer__links">
           <a href={profile.social.github} target="_blank" rel="noopener noreferrer">GitHub</a>
           <a href={profile.social.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a href={profile.cv.path} download>CV</a>
+          <a href={profile.cv.path} download={profile.cv.fileName}>CV</a>
         </nav>
 
         <p className="footer__copy mono">© {year} {profile.name}</p>

@@ -5,20 +5,29 @@
    ============================================================ */
 :root {
   /* color */
-  --bg: #F6F7F9;
-  --bg-raised: #FFFFFF;
-  --bg-inset: #EDEFF3;
+  --bg: #EEF1F6;
+  --bg-raised: #FCFCFE;
+  --bg-inset: #E4E8F0;
   --ink: #0B1220;
   --ink-soft: #4B5768;
   --ink-faint: #8892A0;
-  --line: #E1E5EB;
-  --line-strong: #CDD3DC;
+  --line: #DBDFE7;
+  --line-strong: #C3C9D4;
   --accent: #2F6FED;
   --accent-ink: #FFFFFF;
-  --accent-soft: #EAF0FE;
+  --accent-soft: #E4EBFD;
   --cyan: #12B5C9;
   --code-bg: #0B1220;
   --code-ink: #D6E4FF;
+  /* fijas: para paneles tipo "terminal" que deben verse siempre oscuros,
+     en claro y en oscuro (no se redefinen en el bloque [data-theme='dark']) */
+  --panel-invert-bg: #0B1220;
+  --panel-invert-ink: #FFFFFF;
+  --panel-invert-text: #A9B4C9;
+  --navbar-bg: rgba(238, 241, 246, 0.7);
+  --navbar-bg-scrolled: rgba(238, 241, 246, 0.92);
+  --shadow-card: 0 1px 2px rgba(11, 18, 32, 0.04), 0 12px 28px -16px rgba(11, 18, 32, 0.16);
+  color-scheme: light;
 
   /* type */
   --font-display: 'Space Grotesk', 'Arial Narrow', sans-serif;
@@ -39,7 +48,36 @@
   --dur-m: 0.5s;
 }
 
-* { box-sizing: border-box; }
+/* ============================================================
+   DARK THEME
+   Se activa poniendo data-theme="dark" en <html> (ver useTheme.js).
+   Todo el resto del CSS ya usa estas variables, así que no hay
+   que tocar nada más para que el modo oscuro funcione.
+   ============================================================ */
+:root[data-theme='dark'] {
+  --bg: #0B0F17;
+  --bg-raised: #121826;
+  --bg-inset: #171F30;
+  --ink: #EDEFF4;
+  --ink-soft: #A9B2C3;
+  --ink-faint: #6B7488;
+  --line: #232B3D;
+  --line-strong: #303A50;
+  --accent: #5B8DF9;
+  --accent-ink: #0B0F17;
+  --accent-soft: #1B2740;
+  --cyan: #35D6EC;
+  --code-bg: #060911;
+  --code-ink: #BFD4FF;
+  --navbar-bg: rgba(11, 15, 23, 0.7);
+  --navbar-bg-scrolled: rgba(11, 15, 23, 0.92);
+  --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.3), 0 16px 32px -18px rgba(0, 0, 0, 0.55);
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
 
 html {
   scroll-behavior: smooth;
@@ -47,16 +85,37 @@ html {
 
 body {
   margin: 0;
-  background: var(--bg);
   color: var(--ink);
   font-family: var(--font-body);
   font-size: 16px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+  background-color: var(--bg);
+  /* textura sutil: quita el efecto "plano/en blanco" sin distraer del contenido */
+  background-image:
+    radial-gradient(60vw 60vw at 85% -10%, var(--accent-soft) 0%, transparent 60%),
+    radial-gradient(50vw 50vw at -10% 30%, var(--accent-soft) 0%, transparent 55%),
+    linear-gradient(var(--line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size: auto, auto, 42px 42px, 42px 42px;
+  background-attachment: fixed;
+  transition: background-color var(--dur-m) var(--ease);
 }
 
-h1, h2, h3, h4 {
+:root[data-theme='dark'] body {
+  background-image:
+    radial-gradient(60vw 60vw at 85% -10%, var(--accent-soft) 0%, transparent 62%),
+    radial-gradient(50vw 50vw at -10% 30%, rgba(53, 214, 236, 0.08) 0%, transparent 55%),
+    linear-gradient(var(--line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size: auto, auto, 42px 42px, 42px 42px;
+}
+
+h1,
+h2,
+h3,
+h4 {
   font-family: var(--font-display);
   font-weight: 600;
   line-height: 1.1;
@@ -64,7 +123,9 @@ h1, h2, h3, h4 {
   margin: 0;
 }
 
-p { margin: 0; }
+p {
+  margin: 0;
+}
 
 a {
   color: inherit;
@@ -76,7 +137,10 @@ button {
   cursor: pointer;
 }
 
-img { max-width: 100%; display: block; }
+img {
+  max-width: 100%;
+  display: block;
+}
 
 ::selection {
   background: var(--accent);
@@ -97,6 +161,26 @@ img { max-width: 100%; display: block; }
 
 .section {
   padding-block: var(--section-pad);
+}
+
+/* franja con fondo distinto para romper el blanco continuo entre secciones */
+.section--alt {
+  background: var(--bg-raised);
+  border-block: 1px solid var(--line);
+  position: relative;
+}
+
+.section--alt::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(45vw 30vw at 15% 0%, var(--accent-soft) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.section--alt>* {
+  position: relative;
 }
 
 .eyebrow {
@@ -120,18 +204,23 @@ img { max-width: 100%; display: block; }
   transform: translateY(18px);
   transition: opacity var(--dur-m) var(--ease), transform var(--dur-m) var(--ease);
 }
+
 .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
+  html {
+    scroll-behavior: auto;
+  }
+
   .reveal {
     opacity: 1;
     transform: none;
     transition: none;
   }
+
   * {
     animation-duration: 0.001ms !important;
     transition-duration: 0.001ms !important;
