@@ -5,26 +5,26 @@ import { profile } from '../../data/profile'
 import './About.css'
 
 const FOCUS_AREAS = [
-  { label: 'Frontend', detail: 'React · JavaScript · Vite · TanStack Query' },
-  { label: 'Backend', detail: '.NET 8 · Node.js · Ruby on Rails · REST API' },
-  { label: 'Datos', detail: 'SQL Server · PostgreSQL · Entity Framework Core' },
-  { label: 'Arquitectura', detail: 'Clean Architecture · APIs · separación de responsabilidades' },
-  { label: 'Cloud & DevOps', detail: 'AWS · Docker · CI/CD · GitHub Actions' },
-  { label: 'Seguridad', detail: 'JWT · autenticación · autorización · buenas prácticas' },
+  { label: 'Frontend', detail: 'React · TypeScript · Next.js · Vite · TanStack Query' },
+  { label: 'Backend', detail: '.NET 8 · Node.js · Python · REST API · GraphQL' },
+  { label: 'Datos', detail: 'PostgreSQL · SQL Server · Entity Framework · Prisma · Drizzle' },
+  { label: 'Arquitectura', detail: 'Clean Architecture · multi-tenant · microfrontends' },
+  { label: 'Cloud & DevOps', detail: 'Vercel · AWS · Docker · CI/CD · GitHub Actions' },
+  { label: 'Calidad', detail: 'Jest · React Testing Library · pytest · Code Reviews' },
 ]
 
 const ABOUT_TECHNOLOGIES = [
   { name: 'React', icon: 'react' },
-  { name: 'JavaScript', icon: 'javascript' },
+  { name: 'TypeScript', icon: 'typescript' },
+  { name: 'Next.js', icon: 'nextjs' },
   { name: 'C# / .NET 8', icon: 'dotnet' },
   { name: 'Node.js', icon: 'nodejs' },
-  { name: 'Ruby on Rails', icon: 'rails' },
+  { name: 'Python', icon: 'python' },
   { name: 'PostgreSQL', icon: 'postgresql' },
   { name: 'SQL Server', icon: 'sqlserver' },
   { name: 'Docker', icon: 'docker' },
   { name: 'AWS', icon: 'aws' },
-  { name: 'JWT', icon: 'jwt' },
-  { name: 'GitHub Actions', icon: 'githubactions' },
+  { name: 'GraphQL', icon: 'graphql' },
   { name: 'REST API', icon: 'restapi' },
 ]
 

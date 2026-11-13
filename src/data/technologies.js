@@ -1,33 +1,51 @@
 export const technologies = [
   {
-    category: 'Backend',
-    items: [
-      { name: 'C#', icon: 'csharp', description: 'Lenguaje principal para desarrollo backend.' },
-      { name: 'ASP.NET Core / .NET 8', icon: 'dotnet', description: 'Framework y plataforma para construir APIs y servicios robustos.' },
-      { name: 'Node.js', icon: 'nodejs', description: 'Entorno de ejecución para aplicaciones y APIs con JavaScript.' },
-      { name: 'Ruby on Rails', icon: 'rails', description: 'Framework para desarrollo de aplicaciones web Full Stack.' },
-      { name: 'REST API', icon: 'restapi', description: 'Diseño, integración y consumo de APIs RESTful.' },
-      { name: 'JWT', icon: 'jwt', description: 'Autenticación basada en tokens para aplicaciones web y APIs.' },
-      { name: 'Clean Architecture', icon: 'architecture', description: 'Diseño orientado a separación de responsabilidades y mantenibilidad.' },
-    ],
-  },
-  {
     category: 'Frontend',
     items: [
       { name: 'React', icon: 'react', description: 'Interfaces modernas basadas en componentes reutilizables.' },
+      { name: 'TypeScript', icon: 'typescript', description: 'Tipado estático para aplicaciones escalables.' },
       { name: 'JavaScript', icon: 'javascript', description: 'Desarrollo de lógica e interacción en aplicaciones web.' },
+      { name: 'Next.js', icon: 'nextjs', description: 'Framework Full Stack de React con App Router y SSR.' },
       { name: 'TanStack Query', icon: 'tanstack', description: 'Gestión de estado servidor, caché y sincronización de datos.' },
+      { name: 'Redux', icon: 'redux', description: 'Manejo de estado global en aplicaciones complejas.' },
+      { name: 'Tailwind CSS', icon: 'tailwind', description: 'Estilos utilitarios para construir interfaces rápidas.' },
       { name: 'Vite', icon: 'vite', description: 'Herramienta de desarrollo y build para aplicaciones frontend.' },
       { name: 'HTML', icon: 'html', description: 'Estructura semántica de interfaces web.' },
       { name: 'CSS', icon: 'css', description: 'Diseño visual, layouts y responsive design.' },
     ],
   },
   {
+    category: 'Backend',
+    items: [
+      { name: 'C#', icon: 'csharp', description: 'Lenguaje principal para desarrollo backend.' },
+      { name: 'ASP.NET Core / .NET 8', icon: 'dotnet', description: 'Framework y plataforma para construir APIs y servicios robustos.' },
+      { name: 'Node.js', icon: 'nodejs', description: 'Entorno de ejecución para aplicaciones y APIs con JavaScript.' },
+      { name: 'Express', icon: 'express', description: 'Framework minimalista para APIs REST sobre Node.js.' },
+      { name: 'Prisma', icon: 'prisma', description: 'ORM con tipado seguro para acceso a bases de datos.' },
+      { name: 'Drizzle ORM', icon: 'drizzle', description: 'ORM ligero de TypeScript para SQL tipado.' },
+      { name: 'Python', icon: 'python', description: 'Automatización, bots y servicios backend.' },
+      { name: 'REST API', icon: 'restapi', description: 'Diseño, integración y consumo de APIs RESTful.' },
+      { name: 'GraphQL', icon: 'graphql', description: 'Consultas flexibles contra APIs con un solo endpoint.' },
+      { name: 'JWT', icon: 'jwt', description: 'Autenticación basada en tokens para aplicaciones web y APIs.' },
+      { name: 'Clean Architecture', icon: 'architecture', description: 'Diseño orientado a separación de responsabilidades y mantenibilidad.' },
+    ],
+  },
+  {
     category: 'Datos',
     items: [
-      { name: 'SQL Server', icon: 'sqlserver', description: 'Modelado y persistencia de datos relacionales.' },
       { name: 'PostgreSQL', icon: 'postgresql', description: 'Base de datos relacional para aplicaciones escalables.' },
-      { name: 'MongoDB', icon: 'mongodb', description: 'Base de datos NoSQL para escenarios orientados a documentos.' },
+      { name: 'SQL Server', icon: 'sqlserver', description: 'Modelado y persistencia de datos relacionales.' },
+      { name: 'MySQL', icon: 'mysql', description: 'Base de datos relacional para aplicaciones web.' },
+      { name: 'SQLite', icon: 'sqlite', description: 'Base de datos embebida para aplicaciones ligeras.' },
+      { name: 'Entity Framework Core', icon: 'entityframework', description: 'ORM de .NET para modelar y consultar datos.' },
+    ],
+  },
+  {
+    category: 'Testing',
+    items: [
+      { name: 'Jest', icon: 'jest', description: 'Framework de pruebas unitarias para JavaScript.' },
+      { name: 'React Testing Library', icon: 'testinglibrary', description: 'Pruebas de componentes desde la perspectiva del usuario.' },
+      { name: 'pytest', icon: 'python', description: 'Pruebas automatizadas para código Python.' },
     ],
   },
   {
@@ -37,9 +55,21 @@ export const technologies = [
       { name: 'GitHub', icon: 'github', description: 'Repositorios, colaboración y automatización del ciclo de desarrollo.' },
       { name: 'Docker', icon: 'docker', description: 'Contenerización y entornos reproducibles para aplicaciones.' },
       { name: 'AWS', icon: 'aws', description: 'Servicios cloud para despliegue, infraestructura y escalabilidad.' },
+      { name: 'Vercel', icon: 'nextjs', description: 'Despliegue de aplicaciones frontend y serverless.' },
       { name: 'GitHub Actions', icon: 'githubactions', description: 'Automatización de pipelines CI/CD.' },
+      { name: 'Azure DevOps', icon: 'azuredevops', description: 'Pipelines, tableros y gestión de proyectos en la nube.' },
+      { name: 'Linux', icon: 'linux', description: 'Desarrollo y despliegue en entornos Linux.' },
       { name: 'Swagger / OpenAPI', icon: 'swagger', description: 'Documentación e interacción con APIs.' },
       { name: 'Postman', icon: 'postman', description: 'Pruebas e integración de APIs.' },
+    ],
+  },
+  {
+    category: 'Metodologías',
+    items: [
+      { name: 'Scrum', icon: 'architecture', description: 'Trabajo ágil en equipo con sprints y entregas continuas.' },
+      { name: 'Code Reviews', icon: 'github', description: 'Revisión de código para calidad y conocimiento compartido.' },
+      { name: 'Jira', icon: 'jira', description: 'Seguimiento de trabajo y gestión de historias.' },
+      { name: 'Storybook', icon: 'storybook', description: 'Documentación y pruebas visuales de componentes UI.' },
     ],
   },
 ]

@@ -101,6 +101,62 @@
   max-width: 70ch;
 }
 
+.project-card__highlights {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 7px 18px;
+}
+
+.project-card__highlight {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 8px;
+  color: var(--ink);
+  font-size: 0.86rem;
+  line-height: 1.45;
+}
+
+.project-card__highlight svg {
+  color: var(--accent);
+  flex: 0 0 auto;
+  margin-top: 3px;
+  font-size: 0.9rem;
+}
+
+/* tarjeta destacada (layout feature, ancho completo) */
+.project-card--feature {
+  background:
+    radial-gradient(700px 260px at 95% -10%, var(--accent-soft), transparent 70%),
+    var(--bg-raised);
+  border-color: var(--line-strong);
+}
+
+.project-card--feature .project-card__name {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+}
+
+.project-card--feature::after {
+  content: 'Destacado';
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-ink);
+  background: var(--accent);
+  border-radius: 20px;
+  padding: 5px 11px;
+}
+
+.project-card--feature .project-card__head .project-card__status {
+  margin-right: 92px;
+}
+
 .project-card__architecture {
   background: var(--bg-inset);
   border: 1px solid var(--line);
@@ -188,6 +244,11 @@
   font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 0.06em;
+}
+
+.project-card__demo-note {
+  font-size: 0.72rem;
+  color: var(--ink-faint);
 }
 
 .project-card__links {

@@ -70,6 +70,46 @@
   color: var(--ink-faint);
 }
 
+/* banda de métricas: lo primero que escanea un reclutador */
+.hero__stats {
+  margin: 30px 0 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  max-width: 520px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-m);
+  overflow: hidden;
+}
+
+.hero__stat {
+  background: var(--bg-raised);
+  padding: 14px 16px;
+  margin: 0;
+}
+
+.hero__stat-value {
+  display: block;
+  font-size: clamp(1.3rem, 2.4vw, 1.7rem);
+  font-weight: 600;
+  color: var(--accent);
+  line-height: 1.2;
+}
+
+.hero__stat-label {
+  margin-top: 5px;
+  font-size: 0.74rem;
+  line-height: 1.4;
+  color: var(--ink-soft);
+}
+
+@media (max-width: 520px) {
+  .hero__stats {
+    grid-template-columns: 1fr;
+  }
+}
+
 .hero__social-link {
   color: var(--ink-soft);
   transition: color var(--dur-s) var(--ease);

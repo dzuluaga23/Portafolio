@@ -1,6 +1,10 @@
-import { FaGithub, FaGlobe, FaServer } from 'react-icons/fa'
-import { FiArrowUpRight, FiCode, FiLayers, FiShield } from 'react-icons/fi'
-import { SiDocker, SiDotnet, SiJsonwebtokens, SiNodedotjs, SiPostgresql, SiReact, SiRubyonrails } from 'react-icons/si'
+import { FaGithub, FaGlobe, FaJsSquare, FaServer, FaTelegramPlane } from 'react-icons/fa'
+import { FiArrowUpRight, FiCheckCircle, FiCode, FiDatabase, FiLayers, FiShield, FiBarChart2, FiUpload, FiSend, FiClock, FiBox } from 'react-icons/fi'
+import {
+  SiDocker, SiDotnet, SiExpress, SiJsonwebtokens, SiNodedotjs, SiPostgresql, SiPrisma, SiPython,
+  SiReact, SiReactquery, SiReactrouter, SiNextdotjs, SiTailwindcss, SiTypescript, SiZod,
+  SiBootstrap, SiSqlite, SiVite,
+} from 'react-icons/si'
 import Button from '../Button/Button'
 import './ProjectCard.css'
 
@@ -8,23 +12,46 @@ const ICONS = {
   app: <FaGlobe />,
   api: <FaServer />,
   code: <FaGithub />,
+  telegram: <FaTelegramPlane />,
   frontend: <FiCode />,
   backend: <FaServer />,
 }
 
 const TECH_ICONS = {
   React: SiReact,
-  'Vite': FiLayers,
+  'React 19': SiReact,
+  'React Router': SiReactrouter,
+  Vite: SiVite,
+  JavaScript: FaJsSquare,
+  'Next.js 16': SiNextdotjs,
+  TypeScript: SiTypescript,
+  'Tailwind CSS 4': SiTailwindcss,
+  Zod: SiZod,
+  'C#': SiDotnet,
   '.NET 8': SiDotnet,
-  '.NET': SiDotnet,
+  '.NET Framework 4.8': SiDotnet,
   'ASP.NET Core': SiDotnet,
+  'ASP.NET Web API': SiDotnet,
+  'Entity Framework 6': SiDotnet,
   'Node.js': SiNodedotjs,
-  'Ruby on Rails': SiRubyonrails,
+  'Express 5': SiExpress,
+  'Prisma 7': SiPrisma,
   PostgreSQL: SiPostgresql,
+  'Neon Postgres': SiPostgresql,
+  SQLite: SiSqlite,
   JWT: SiJsonwebtokens,
   Docker: SiDocker,
-  'REST API': FiArrowUpRight,
-  'Clean Architecture': FiLayers,
+  Python: SiPython,
+  'python-telegram-bot': SiPython,
+  'React Bootstrap': SiBootstrap,
+  'TanStack Query': SiReactquery,
+  'Drizzle ORM': FiDatabase,
+  'Better Auth': FiShield,
+  'Shadcn/ui': FiBox,
+  Recharts: FiBarChart2,
+  UploadThing: FiUpload,
+  Resend: FiSend,
+  'Vercel Cron': FiClock,
 }
 
 function TechChip({ name }) {
@@ -38,7 +65,7 @@ function TechChip({ name }) {
 }
 
 export default function ProjectCard({ project }) {
-  const { index, name, tagline, description, technologies, architecture, status, links, layout, demoCredentials } =
+  const { index, name, tagline, description, highlights, technologies, architecture, status, links, layout, demoCredentials } =
     project
 
   const isInDevelopment = status === 'En desarrollo'
@@ -62,6 +89,17 @@ export default function ProjectCard({ project }) {
 
       <p className="project-card__description">{description}</p>
 
+      {highlights && highlights.length > 0 && (
+        <ul className="project-card__highlights">
+          {highlights.map((highlight) => (
+            <li key={highlight} className="project-card__highlight">
+              <FiCheckCircle aria-hidden="true" />
+              <span>{highlight}</span>
+            </li>
+          ))}
+        </ul>
+      )}
+
       {architecture && architecture.length > 0 && (
         <div className="project-card__architecture mono" aria-label="Arquitectura">
           <span className="project-card__architecture-label"><FiLayers /> Arquitectura</span>
@@ -84,8 +122,11 @@ export default function ProjectCard({ project }) {
 
       {demoCredentials && (
         <div className="project-card__demo mono">
-          <span className="project-card__demo-label"><FiShield /> Credenciales de demostración</span>
-          <span>usuario: david23 · contraseña: micontra123</span>
+          <span className="project-card__demo-label"><FiShield /> Cuenta de demostración</span>
+          <span>
+            {demoCredentials.username} · {demoCredentials.password}
+          </span>
+          {demoCredentials.note && <span className="project-card__demo-note">{demoCredentials.note}</span>}
         </div>
       )}
 
@@ -96,7 +137,7 @@ export default function ProjectCard({ project }) {
             href={link.href || undefined}
             target="_blank"
             rel="noopener noreferrer"
-            variant={link.type === 'app' ? 'primary' : 'secondary'}
+            variant={link.type === 'app' || link.type === 'telegram' ? 'primary' : 'secondary'}
             icon={ICONS[link.type] ?? <FiArrowUpRight />}
             disabled={link.disabled}
           >

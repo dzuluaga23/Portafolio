@@ -13,8 +13,8 @@ export default function Projects() {
         <SectionTitle
           index="03"
           eyebrow="Proyectos"
-          title="Productos que he construido"
-          description="Cada proyecto integra frontend, backend y base de datos propios. No son ejercicios aislados: son aplicaciones desplegadas de punta a punta."
+          title="Productos desplegados en la nube"
+          description="4 aplicaciones en producción que puedes probar ahora mismo, más un proyecto en camino. Cada una integra frontend, backend y base de datos propios — no son ejercicios aislados."
         />
 
         <div className="projects__grid">

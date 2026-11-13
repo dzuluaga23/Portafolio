@@ -13,6 +13,7 @@ import {
   FaDocker,
   FaFigma,
   FaAws,
+  FaMicrosoft,
 } from 'react-icons/fa'
 import {
   SiGraphql,
@@ -28,7 +29,18 @@ import {
   SiRubyonrails,
   SiJsonwebtokens,
   SiGithubactions,
-  SiReactquery
+  SiReactquery,
+  SiTypescript,
+  SiNextdotjs,
+  SiTailwindcss,
+  SiPrisma,
+  SiExpress,
+  SiPython,
+  SiJest,
+  SiTestinglibrary,
+  SiRedux,
+  SiSqlite,
+  SiStorybook,
 } from 'react-icons/si'
 import { DiMysql } from 'react-icons/di'
 import { TbDatabase } from 'react-icons/tb'
@@ -68,6 +80,19 @@ const icons = {
   githubactions: { component: SiGithubactions, color: '#2088FF' },
   tanstack: { component: SiReactquery, color: '#FF4154' },
   architecture: { component: FaCogs, color: '#6C2DC7' },
+  typescript: { component: SiTypescript, color: '#3178C6' },
+  nextjs: { component: SiNextdotjs, color: '#000000' },
+  tailwind: { component: SiTailwindcss, color: '#06B6D4' },
+  drizzle: { component: TbDatabase, color: '#A8C420' },
+  prisma: { component: SiPrisma, color: '#2D3748' },
+  express: { component: SiExpress, color: '#444444' },
+  python: { component: SiPython, color: '#3776AB' },
+  jest: { component: SiJest, color: '#C21325' },
+  testinglibrary: { component: SiTestinglibrary, color: '#E33332' },
+  redux: { component: SiRedux, color: '#764ABC' },
+  sqlite: { component: SiSqlite, color: '#003B57' },
+  azuredevops: { component: FaMicrosoft, color: '#0078D4' },
+  storybook: { component: SiStorybook, color: '#FF4785' },
 }
 
 export default function TechBadge({ name, description, icon }) {
