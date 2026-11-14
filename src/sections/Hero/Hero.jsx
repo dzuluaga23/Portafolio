@@ -67,17 +67,6 @@ export default function Hero() {
               LinkedIn
             </a>
           </div>
-
-          {profile.heroStats && profile.heroStats.length > 0 && (
-            <dl className="hero__stats">
-              {profile.heroStats.map((stat) => (
-                <div key={stat.label} className="hero__stat">
-                  <dt className="hero__stat-value mono">{stat.value}</dt>
-                  <dd className="hero__stat-label">{stat.label}</dd>
-                </div>
-              ))}
-            </dl>
-          )}
         </div>
 
         <div className="hero__panel" aria-hidden="true">

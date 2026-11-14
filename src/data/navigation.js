@@ -5,6 +5,6 @@ export const navigation = [
   { id: 'sobre-mi', index: '01', label: 'Sobre mí', navLabel: 'Sobre mí' },
   { id: 'stack', index: '02', label: 'Stack', navLabel: 'Stack' },
   { id: 'proyectos', index: '03', label: 'Proyectos', navLabel: 'Proyectos' },
-  { id: 'evolucion', index: '04', label: 'Evolución', navLabel: 'Experiencia' },
+  { id: 'evolucion', index: '04', label: 'Trayectoria', navLabel: 'Trayectoria' },
   { id: 'contacto', index: '05', label: 'Contacto', navLabel: 'Contacto' },
 ]
