@@ -14,7 +14,7 @@ export default function Projects() {
           index="03"
           eyebrow="Proyectos"
           title="Productos desplegados en la nube"
-          description="4 aplicaciones en producción que puedes probar ahora mismo, más un proyecto en camino. Cada una integra frontend, backend y base de datos propios — no son ejercicios aislados."
+          description="5 aplicaciones en producción que puedes probar ahora mismo, más un proyecto en camino. Cada una integra frontend, backend y base de datos propios — no son ejercicios aislados."
         />
 
         <div className="projects__grid">

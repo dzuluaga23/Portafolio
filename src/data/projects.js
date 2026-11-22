@@ -5,8 +5,8 @@
 export const projects = [
   {
     index: '01',
-    slug: 'chronodevice',
-    name: 'ChronoDevice',
+    slug: 'traccia',
+    name: 'Traccia',
     tagline: 'El historial clínico de los activos de tu empresa',
     description:
       'Plataforma SaaS multi-tenant para que empresas lleven control total de sus equipos físicos: inventario, asignación de responsables, mantenimientos y reparaciones con costos, garantías, alertas automáticas y exportes. Cada activo tiene un historial completo de su ciclo de vida y una ficha pública accesible por código QR desde el celular. Backend por capas (routes → services → repositories) dentro de Next.js, con aislamiento total de datos por empresa.',
@@ -33,19 +33,51 @@ export const projects = [
     ],
     architecture: ['Next.js API', 'Zod + Auth', 'Services', 'Repositories', 'Drizzle', 'Neon Postgres'],
     status: 'Desplegado',
-    layout: 'feature',
+    layout: 'standard',
     demoCredentials: {
-      username: 'demo@chronodevice.com',
-      password: 'ChronoDemo2026*',
+      username: 'demo@traccia.co',
+      password: 'TracciaDemo2026*',
       note: 'También puedes crear tu cuenta gratis en 1 minuto, sin tarjeta.',
     },
     links: [
-      { label: 'Ver aplicación', href: 'https://chrono-device.vercel.app', type: 'app' },
-      { label: 'Código', href: 'https://github.com/dzuluaga23/ChronoDevice', type: 'code' },
+      { label: 'Ver aplicación', href: 'https://traccia-co.vercel.app', type: 'app' },
+      { label: 'Código', href: 'https://github.com/dzuluaga23/Traccia', type: 'code' },
     ],
   },
   {
     index: '02',
+    slug: 'coply',
+    name: 'Coply',
+    tagline: 'Las finanzas de tu familia, claras',
+    description:
+      'Aplicación web de presupuesto familiar para Colombia: cada miembro registra sus gastos e ingresos desde el celular y toda la familia ve el mismo panel al instante. Los grupos familiares son multi-tenant con aislamiento real mediante Row Level Security en Supabase, se unen con un código de 6 caracteres y se sincronizan en tiempo real. Incluye panel del mes (entró / salió / queda y en qué se fue la plata), bolsas de ahorro, tarjetas de crédito con reglas colombianas (corte, cuotas, abonos, extracto y mora) y semáforo tributario DIAN con topes 2026 y proyección de fin de año.',
+    highlights: [
+      'Grupos familiares aislados con RLS',
+      'Invitación por código de 6 caracteres',
+      'Sincronización en tiempo real',
+      'Tarjetas con corte, cuotas y abonos',
+      'Semáforo tributario DIAN 2026',
+    ],
+    technologies: [
+      'Next.js 16',
+      'React 19',
+      'TypeScript',
+      'Tailwind CSS 4',
+      'Shadcn/ui',
+      'Supabase',
+      'PostgreSQL',
+      'Vercel',
+    ],
+    architecture: ['Next.js 16', 'Server Actions', 'Supabase RLS', 'Postgres', 'Realtime'],
+    status: 'Desplegado',
+    layout: 'standard',
+    links: [
+      { label: 'Ver aplicación', href: 'https://coply-co.vercel.app', type: 'app' },
+      { label: 'Código', href: 'https://github.com/dzuluaga23/Coply', type: 'code' },
+    ],
+  },
+  {
+    index: '03',
     slug: 'spa-vehiculos',
     name: 'AutoSpa — SPA Vehículos',
     tagline: 'Gestión comercial completa para un spa automotriz',
@@ -85,7 +117,7 @@ export const projects = [
     ],
   },
   {
-    index: '03',
+    index: '04',
     slug: 'natillera',
     name: 'Natillera',
     tagline: 'Aportes, préstamos y ahorro navideño de una natillera',
@@ -121,7 +153,7 @@ export const projects = [
     ],
   },
   {
-    index: '04',
+    index: '05',
     slug: 'tallerbot',
     name: 'TallerBot',
     tagline: 'Bot de Telegram para talleres mecánicos, corriendo 24/7',
@@ -151,7 +183,7 @@ export const projects = [
     ],
   },
   {
-    index: '05',
+    index: '06',
     slug: 'teamflow',
     name: 'TeamFlow',
     tagline: 'Plataforma B2B de gestión de trabajo inspirada en Jira',

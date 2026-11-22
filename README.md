@@ -27,7 +27,7 @@ Todo el contenido real vive en `src/data/`, no en los componentes:
 | Archivo | Qué contiene |
 |---|---|
 | `src/data/profile.js` | Nombre, rol, texto del hero, métricas, "sobre mí", redes, correo, ruta del CV |
-| `src/data/projects.js` | Los 5 proyectos: ChronoDevice, SPA Vehículos, Natillera, TallerBot y TeamFlow |
+| `src/data/projects.js` | Los 6 proyectos: Traccia, Coply, SPA Vehículos, Natillera, TallerBot y TeamFlow |
 | `src/data/technologies.js` | Stack por categoría (Frontend, Backend, Datos, Testing, Cloud & DevOps) |
 | `src/data/evolution.js` | Tu camino: educación y experiencia real |
 | `src/data/navigation.js` | Secciones del navbar y del indicador de scroll |
@@ -36,7 +36,8 @@ Todo el contenido real vive en `src/data/`, no en los componentes:
 
 | Proyecto | Estado | Enlace |
 |---|---|---|
-| ChronoDevice | Desplegado | [chrono-device.vercel.app](https://chrono-device.vercel.app) |
+| Traccia | Desplegado | [traccia-co.vercel.app](https://traccia-co.vercel.app) |
+| Coply | Desplegado | [coply-co.vercel.app](https://coply-co.vercel.app) |
 | AutoSpa — SPA Vehículos | Desplegado | [spavehiculos.netlify.app](https://spavehiculos.netlify.app/login) |
 | Natillera | Desplegado | [natillera-fe.vercel.app](https://natillera-fe.vercel.app) |
 | TallerBot (bot de Telegram) | Desplegado 24/7 | [@taller_vehicular_bot](https://t.me/taller_vehicular_bot) |
@@ -51,7 +52,7 @@ el bloque `.hero__panel` en `src/sections/Hero/Hero.jsx` por una etiqueta
 
 ## Credenciales de demo
 
-Las cuentas de demostración (SPA Vehículos, ChronoDevice) viven en la propiedad
+Las cuentas de demostración (SPA Vehículos, Traccia) viven en la propiedad
 `demoCredentials` de cada proyecto dentro de `src/data/projects.js`. No uses
 credenciales reales sensibles ahí si el repositorio del portafolio es público.
 

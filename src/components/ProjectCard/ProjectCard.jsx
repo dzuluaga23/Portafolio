@@ -3,7 +3,7 @@ import { FiArrowUpRight, FiCheckCircle, FiCode, FiDatabase, FiLayers, FiShield, 
 import {
   SiDocker, SiDotnet, SiExpress, SiJsonwebtokens, SiNodedotjs, SiPostgresql, SiPrisma, SiPython,
   SiReact, SiReactquery, SiReactrouter, SiNextdotjs, SiTailwindcss, SiTypescript, SiZod,
-  SiBootstrap, SiSqlite, SiVite,
+  SiBootstrap, SiSqlite, SiVite, SiSupabase, SiVercel,
 } from 'react-icons/si'
 import Button from '../Button/Button'
 import './ProjectCard.css'
@@ -38,6 +38,8 @@ const TECH_ICONS = {
   'Prisma 7': SiPrisma,
   PostgreSQL: SiPostgresql,
   'Neon Postgres': SiPostgresql,
+  Supabase: SiSupabase,
+  Vercel: SiVercel,
   SQLite: SiSqlite,
   JWT: SiJsonwebtokens,
   Docker: SiDocker,

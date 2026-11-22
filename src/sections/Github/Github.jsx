@@ -12,7 +12,7 @@ export default function Github() {
             <span className="eyebrow">Código</span>
             <h2 className="github__title">El código detrás de cada proyecto vive en GitHub</h2>
             <p className="github__text">
-              Ahí puedes revisar los repositorios de ChronoDevice, Natillera, SPA Vehículos,
+              Ahí puedes revisar los repositorios de Traccia, Coply, Natillera, SPA Vehículos,
               TallerBot y los proyectos en los que sigo trabajando.
             </p>
           </div>
